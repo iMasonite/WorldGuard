@@ -12,7 +12,6 @@
 
 package com.sk89q.worldguard.protection.databases;
 
-
 public class ProtectionDatabaseException extends Exception {
 	private static final long serialVersionUID = 1L;
 	

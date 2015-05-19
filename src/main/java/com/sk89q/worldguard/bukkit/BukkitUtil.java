@@ -183,7 +183,6 @@ public class BukkitUtil {
 		}
 	}
 	
-	
 	/** Returns whether an entity should be removed for the halt activity mode.
 	 * 
 	 * @param entity

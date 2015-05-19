@@ -666,7 +666,7 @@ public class WorldGuardPlugin extends JavaPlugin {
 		getServer().broadcast(msg, "worldguard.notify");
 		Set<Permissible> subs = getServer().getPluginManager().getPermissionSubscriptions("worldguard.notify");
 		for (Player player : getServer().getOnlinePlayers()) {
-			if (!(subs.contains(player) && player.hasPermission("worldguard.notify")) && hasPermission(player, "worldguard.notify")) { 
+			if (!(subs.contains(player) && player.hasPermission("worldguard.notify")) && hasPermission(player, "worldguard.notify")) {
 				player.sendMessage(msg);
 			}
 		}
