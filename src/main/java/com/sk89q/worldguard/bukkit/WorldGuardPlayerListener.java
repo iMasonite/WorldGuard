@@ -175,14 +175,14 @@ public class WorldGuardPlayerListener implements Listener {
 		GameMode gameMode = set.getFlag(DefaultFlag.GAME_MODE);
 		
 		if (state.lastFarewell != null && (farewell == null || !state.lastFarewell.equals(farewell))) {
-			String replacedFarewell = plugin.replaceMacros(player, BukkitUtil.replaceColorMacros(state.lastFarewell));
+			String replacedFarewell = plugin.replaceMacros(player, ChatColor.translateAlternateColorCodes('&', state.lastFarewell));
 			for (String line : replacedFarewell.split("\n")) {
 				player.sendMessage(line);
 			}
 		}
 		
 		if (greeting != null && (state.lastGreeting == null || !state.lastGreeting.equals(greeting))) {
-			String replacedGreeting = plugin.replaceMacros(player, BukkitUtil.replaceColorMacros(greeting));
+			String replacedGreeting = plugin.replaceMacros(player, ChatColor.translateAlternateColorCodes('&', greeting));
 			for (String line : replacedGreeting.split("\n")) {
 				player.sendMessage(line);
 			}
