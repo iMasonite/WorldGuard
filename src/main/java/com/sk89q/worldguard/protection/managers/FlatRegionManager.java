@@ -171,6 +171,29 @@ public class FlatRegionManager extends RegionManager {
 	}
 	
 	@Override
+	public boolean overlapsNonMemberRegion(ProtectedRegion checkRegion, LocalPlayer player) {
+		List<ProtectedRegion> appRegions = new ArrayList<ProtectedRegion>();
+		
+		for (ProtectedRegion other : regions.values()) {
+			if (other.getMembers().contains(player)) {
+				continue;
+			}
+			
+			appRegions.add(other);
+		}
+		
+		List<ProtectedRegion> intersectRegions;
+		try {
+			intersectRegions = checkRegion.getIntersectingRegions(appRegions);
+		}
+		catch (UnsupportedIntersectionException e) {
+			intersectRegions = new ArrayList<ProtectedRegion>();
+		}
+		
+		return intersectRegions.size() > 0;
+	}
+
+	@Override
 	public int size() {
 		return regions.size();
 	}
@@ -187,4 +210,5 @@ public class FlatRegionManager extends RegionManager {
 		
 		return count;
 	}
+
 }

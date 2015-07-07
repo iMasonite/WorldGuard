@@ -148,6 +148,14 @@ public abstract class RegionManager {
 	 * @return whether there is an overlap */
 	public abstract boolean overlapsUnownedRegion(ProtectedRegion region, LocalPlayer player);
 	
+	/** Returns true if the provided region overlaps with any other region that the player is not a
+	 * member of.
+	 * 
+	 * @param region region to check
+	 * @param player player to check against
+	 * @return whether there is an overlap */
+	public abstract boolean overlapsNonMemberRegion(ProtectedRegion region, LocalPlayer player);
+	
 	/** Get the number of regions.
 	 * 
 	 * @return number of regions */

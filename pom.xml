@@ -78,13 +78,12 @@
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
 			<version>1.4.7-R1.0</version>
-			<scope>provided</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>craftbukkit</artifactId>
 			<version>1.4.7-R1.0</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -126,7 +125,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
+			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

@@ -76,10 +76,6 @@ public final class DefaultFlag {
 	public static final IntegerFlag FEED_AMOUNT = new IntegerFlag("feed-amount", RegionGroup.ALL);
 	public static final IntegerFlag MIN_FOOD = new IntegerFlag("feed-min-hunger", RegionGroup.ALL);
 	public static final IntegerFlag MAX_FOOD = new IntegerFlag("feed-max-hunger", RegionGroup.ALL);
-	// public static final IntegerFlag MAX_PLAYERS = new IntegerFlag("max-players-allowed",
-	// RegionGroup.ALL);
-	// public static final StringFlag MAX_PLAYERS_MESSAGE = new
-	// StringFlag("max-players-reject-message", RegionGroup.ALL);
 	public static final LocationFlag TELE_LOC = new LocationFlag("teleport", RegionGroup.MEMBERS);
 	public static final LocationFlag SPAWN_LOC = new LocationFlag("spawn", RegionGroup.MEMBERS);
 	public static final StateFlag ENABLE_SHOP = new StateFlag("allow-shop", false);
@@ -88,13 +84,11 @@ public final class DefaultFlag {
 	public static final SetFlag<String> BLOCKED_CMDS = new SetFlag<String>("blocked-cmds", RegionGroup.ALL, new CommandStringFlag(null));
 	public static final SetFlag<String> ALLOWED_CMDS = new SetFlag<String>("allowed-cmds", RegionGroup.ALL, new CommandStringFlag(null));
 	
-	public static final Flag<?>[] flagsList = new Flag<?>[] { PASSTHROUGH, BUILD, CONSTRUCT, PVP, CHEST_ACCESS, PISTONS, TNT, LIGHTER, USE, PLACE_VEHICLE, DESTROY_VEHICLE, SLEEP, MOB_DAMAGE, MOB_SPAWNING, DENY_SPAWN, INVINCIBILITY, EXP_DROPS, CREEPER_EXPLOSION, OTHER_EXPLOSION, ENDERDRAGON_BLOCK_DAMAGE, GHAST_FIREBALL, ENDER_BUILD, GREET_MESSAGE, FAREWELL_MESSAGE, NOTIFY_ENTER, NOTIFY_LEAVE, EXIT, ENTRY, LIGHTNING, ENTITY_PAINTING_DESTROY, ENDERPEARL, ENTITY_ITEM_FRAME_DESTROY, ITEM_DROP, /*
-																																																																																																																																																																																																																																																						 * MAX_PLAYERS
-																																																																																																																																																																																																																																																						 * ,
-																																																																																																																																																																																																																																																						 * MAX_PLAYERS_MESSAGE
-																																																																																																																																																																																																																																																						 * ,
-																																																																																																																																																																																																																																																						 */
-	HEAL_AMOUNT, HEAL_DELAY, MIN_HEAL, MAX_HEAL, FEED_DELAY, FEED_AMOUNT, MIN_FOOD, MAX_FOOD, SNOW_FALL, SNOW_MELT, ICE_FORM, ICE_MELT, GAME_MODE, MUSHROOMS, LEAF_DECAY, GRASS_SPREAD, MYCELIUM_SPREAD, VINE_GROWTH, SEND_CHAT, RECEIVE_CHAT, FIRE_SPREAD, LAVA_FIRE, LAVA_FLOW, WATER_FLOW, TELE_LOC, SPAWN_LOC, POTION_SPLASH, BLOCKED_CMDS, ALLOWED_CMDS, PRICE, BUYABLE, ENABLE_SHOP };
+	public static final StringFlag RESTRICTION_NAME = new StringFlag("restriction-name", RegionGroup.ALL);
+	public static final StringFlag RESTRICTION_TIME = new StringFlag("restriction-time", RegionGroup.ALL);
+	public static final StringFlag RESTRICTION_OWNE = new StringFlag("restriction-owne", RegionGroup.ALL);
+	
+	public static final Flag<?>[] flagsList = new Flag<?>[] { PASSTHROUGH, BUILD, CONSTRUCT, PVP, CHEST_ACCESS, PISTONS, TNT, LIGHTER, USE, PLACE_VEHICLE, DESTROY_VEHICLE, SLEEP, MOB_DAMAGE, MOB_SPAWNING, DENY_SPAWN, INVINCIBILITY, EXP_DROPS, CREEPER_EXPLOSION, OTHER_EXPLOSION, ENDERDRAGON_BLOCK_DAMAGE, GHAST_FIREBALL, ENDER_BUILD, GREET_MESSAGE, FAREWELL_MESSAGE, NOTIFY_ENTER, NOTIFY_LEAVE, EXIT, ENTRY, LIGHTNING, ENTITY_PAINTING_DESTROY, ENDERPEARL, ENTITY_ITEM_FRAME_DESTROY, ITEM_DROP, HEAL_AMOUNT, HEAL_DELAY, MIN_HEAL, MAX_HEAL, FEED_DELAY, FEED_AMOUNT, MIN_FOOD, MAX_FOOD, SNOW_FALL, SNOW_MELT, ICE_FORM, ICE_MELT, GAME_MODE, MUSHROOMS, LEAF_DECAY, GRASS_SPREAD, MYCELIUM_SPREAD, VINE_GROWTH, SEND_CHAT, RECEIVE_CHAT, FIRE_SPREAD, LAVA_FIRE, LAVA_FLOW, WATER_FLOW, TELE_LOC, SPAWN_LOC, POTION_SPLASH, BLOCKED_CMDS, ALLOWED_CMDS, PRICE, BUYABLE, ENABLE_SHOP, RESTRICTION_NAME, RESTRICTION_TIME, RESTRICTION_OWNE };
 	
 	private DefaultFlag() {}
 	
